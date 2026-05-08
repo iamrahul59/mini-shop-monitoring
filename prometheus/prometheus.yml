@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'products-service'
+    static_configs:
+      - targets: ['products-service:5001']
+
+  - job_name: 'orders-service'
+    static_configs:
+      - targets: ['orders-service:5002']
+
+  - job_name: 'users-service'
+    static_configs:
+      - targets: ['users-service:5003']
